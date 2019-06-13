@@ -32,7 +32,7 @@ The image is built nightly against multiple stable versions and pushed to Docker
 
 | Docker tag | Build from |
 |------------|------------|
-| `latest`   | [Branch: master](https://github.com/eslint/eslint) |
+| `latest`   | Latest stable version |
 | `5`        | Tag: v5.x.x |
 | `4`        | Tag: v4.x.x |
 | `3`        | Tag: v3.x.x |
