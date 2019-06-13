@@ -33,17 +33,11 @@ The image is built nightly against multiple stable versions and pushed to Docker
 | Docker tag | Build from |
 |------------|------------|
 | `latest`   | [Branch: master](https://github.com/eslint/eslint) |
-<!--
-| `1.6.0`    | [Tag: v1.6.0](https://github.com/zaach/eslint/tree/v1.6.0) |
-| `1.5.0`    | [Tag: v1.5.0](https://github.com/zaach/eslint/tree/v1.5.0) |
-| `1.4.1`    | [Tag: v1.4.1](https://github.com/zaach/eslint/tree/v1.4.1) |
-| `1.4.0`    | [Tag: v1.4.0](https://github.com/zaach/eslint/tree/v1.4.0) |
-| `1.3.2`    | [Tag: v1.3.2](https://github.com/zaach/eslint/tree/v1.3.2) |
-| `1.2.0`    | [Tag: v1.2.0](https://github.com/zaach/eslint/tree/v1.2.0) |
-| `1.1.1`    | [Tag: v1.1.1](https://github.com/zaach/eslint/tree/v1.1.1) |
-| `1.1.0`    | [Tag: v1.1.0](https://github.com/zaach/eslint/tree/v1.1.0) |
-| `1.0.1`    | [Tag: v1.0.1](https://github.com/zaach/eslint/tree/v1.0.1) |
--->
+| `5`        | Tag: v5.x.x |
+| `4`        | Tag: v4.x.x |
+| `3`        | Tag: v3.x.x |
+| `2`        | Tag: v2.x.x |
+| `1`        | Tag: v1.x.x |
 
 
 ## Docker mounts

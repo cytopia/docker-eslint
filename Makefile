@@ -25,7 +25,7 @@ test:
 		docker run --rm $(IMAGE) --version | grep -E "^v?$${LATEST}$$"; \
 	else \
 		echo "Testing for tag: $(TAG)"; \
-		docker run --rm $(IMAGE) --version | grep -E "^v?$(TAG)$$"; \
+		docker run --rm $(IMAGE) --version | grep -E "^v?$(TAG)[.0-9]+$$"; \
 	fi
 
 tag:
