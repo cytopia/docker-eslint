@@ -46,6 +46,7 @@ The image is built nightly against multiple stable versions and pushed to Docker
 | Docker tag | Build from |
 |------------|------------|
 | `latest`   | Latest stable version |
+| `6`        | Tag: v6.x.x |
 | `5`        | Tag: v5.x.x |
 | `4`        | Tag: v4.x.x |
 | `3`        | Tag: v3.x.x |
