@@ -29,6 +29,7 @@ env:
     - VERSION=3
     - VERSION=4
     - VERSION=5
+    - VERSION=6
     - VERSION=latest
 
 
