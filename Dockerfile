@@ -1,19 +1,22 @@
 FROM alpine:latest as builder
 
-RUN set -x \
+RUN set -eux \
 	&& apk add --no-cache \
 		nodejs-current \
 		npm
 
 ARG VERSION=latest
-RUN set -x \
+RUN set -eux \
 	&& if [ ${VERSION} = "latest" ]; then \
 		npm install global --production --remove-dev eslint; \
 	else \
 		npm install global --production --remove-dev eslint@^${VERSION}.0.0; \
-	fi
+	fi \
+	\
+	&& eslint --version | grep -E '^v?[0-9]+'
+
 # Remove unecessary files
-RUN set -x \
+RUN set -eux \
 	&& find /node_modules -type d -iname 'test' -prune -exec rm -rf '{}' \; \
 	&& find /node_modules -type d -iname 'tests' -prune -exec rm -rf '{}' \; \
 	&& find /node_modules -type d -iname 'testing' -prune -exec rm -rf '{}' \; \
@@ -44,7 +47,7 @@ LABEL \
 	maintainer="cytopia <cytopia@everythingcli.org>" \
 	repo="https://github.com/cytopia/docker-eslint"
 COPY --from=builder /node_modules/ /node_modules/
-RUN set -x \
+RUN set -eux \
 	&& apk add --no-cache nodejs-current \
 	&& ln -sf /node_modules/eslint/bin/eslint.js /usr/bin/eslint
 
