@@ -13,7 +13,7 @@ RUN set -eux \
 		npm install global --production --remove-dev eslint@^${VERSION}.0.0; \
 	fi \
 	\
-	&& eslint --version | grep -E '^v?[0-9]+'
+	&& /node_modules/eslint/bin/eslint.js --version | grep -E '^v?[0-9]+'
 
 # Remove unecessary files
 RUN set -eux \

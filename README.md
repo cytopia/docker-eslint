@@ -77,6 +77,21 @@ docker run -it --rm -v $(pwd):/data cytopia/eslint .
 ✖ 1 problem (1 error, 0 warnings)
 ```
 
+#### Travis CI example
+
+`travis.yml`
+```yml
+---
+
+sudo: required
+language: minimal
+services:
+  - docker
+
+script:
+  docker run -it --rm -v $(pwd):/data cytopia/eslint .
+```
+
 
 ## Related [#awesome-ci](https://github.com/topics/awesome-ci) projects
 
