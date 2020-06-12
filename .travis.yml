@@ -30,6 +30,7 @@ env:
     - VERSION=4
     - VERSION=5
     - VERSION=6
+    - VERSION=7
     - VERSION=latest
 
 
