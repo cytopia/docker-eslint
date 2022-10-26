@@ -104,9 +104,8 @@ manifest-push: docker-manifest-push
 #  Test Targets
 # -------------------------------------------------------------------------------------------------
 .PHONY: test
-test:
-	@$(MAKE) --no-print-directory _test-version
-	@$(MAKE) --no-print-directory _test-run
+test: _test-version
+test: _test-run
 
 .PHONY: _test-version
 _test-version:
@@ -124,12 +123,14 @@ _test-version:
 		)"; \
 		echo "Testing for latest: $${LATEST}"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^v?$${LATEST}$$"; then \
+			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
 			exit 1; \
 		fi; \
 	else \
 		echo "Testing for tag: $(VERSION)"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^v?$(VERSION)[.0-9]+$$"; then \
+			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
 			exit 1; \
 		fi; \
