@@ -42,7 +42,7 @@
 View **[Dockerfiles](https://github.com/cytopia/docker-eslint/blob/master/Dockerfiles/)** on GitHub.
 
 
-**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`
+**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x`
 
 Tiny Alpine-based multistage-build dockerized version of [eslint](https://github.com/eslint/eslint)<sup>[1]</sup>.
 The image is built nightly against multiple stable versions and pushed to Dockerhub.
@@ -62,34 +62,34 @@ The following Docker image tags are rolling releases and are built and updated e
 [![nightly](https://github.com/cytopia/docker-eslint/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-eslint/actions?query=workflow%3Anightly)
 
 
-| Docker Tag           | Git Ref   | Eslint       | Flavour | Available Architectures                      |
-|----------------------|-----------|--------------|---------|----------------------------------------------|
-| `latest`             | master    | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine`             | master    | latest       | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `8`                  | master    | **`8.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-8`           | master    | **`8.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `7`                  | master    | **`7.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-7`           | master    | **`7.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `6`                  | master    | **`6.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-6`           | master    | **`6.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `5`                  | master    | **`5.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-5`           | master    | **`5.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `4`                  | master    | **`4.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-4`           | master    | **`4.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `3`                  | master    | **`3.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-3`           | master    | **`3.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `2`                  | master    | **`2.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-2`           | master    | **`2.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `1`                  | master    | **`1.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-1`           | master    | **`1.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| Docker Tag            | Git Ref   | Eslint       | Flavour | Available Architectures                      |
+|-----------------------|-----------|--------------|---------|----------------------------------------------|
+| `latest`              | master    | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine`              | master    | latest       | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `8`                   | master    | **`8.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-8`            | master    | **`8.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `7`                   | master    | **`7.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-7`            | master    | **`7.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `6`                   | master    | **`6.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-6`            | master    | **`6.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `5`                   | master    | **`5.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-5`            | master    | **`5.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `4`                   | master    | **`4.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-4`            | master    | **`4.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `3`                   | master    | **`3.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-3`            | master    | **`3.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `2`                   | master    | **`2.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-2`            | master    | **`2.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |           |              |         |                                              |
+| `1`                   | master    | **`1.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-1`            | master    | **`1.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 
 #### Point in time releases
 
@@ -98,34 +98,36 @@ The following Docker image tags are built once and can be used for reproducible 
 [![build](https://github.com/cytopia/docker-eslint/workflows/build/badge.svg)](https://github.com/cytopia/docker-eslint/actions?query=workflow%3Abuild)
 
 
-| Docker Tag           | Git Ref   | Yamllint     | Flavour | Available Architectures                      |
-|----------------------|-----------|--------------|---------|----------------------------------------------|
-| `latest-0.6`         | tag: 0.6  | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-latest-0.6`  | tag: 0.6  | latest       | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `8-0.6`              | tag: 0.6  | **`8.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-8-0.6`       | tag: 0.6  | **`8.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `7-0.6`              | tag: 0.6  | **`7.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-7-0.6`       | tag: 0.6  | **`7.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `6-0.6`              | tag: 0.6  | **`6.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-6-0.6`       | tag: 0.6  | **`6.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `5-0.6`              | tag: 0.6  | **`5.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-5-0.6`       | tag: 0.6  | **`5.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `4-0.6`              | tag: 0.6  | **`4.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-4-0.6`       | tag: 0.6  | **`4.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `3-0.6`              | tag: 0.6  | **`3.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-3-0.6`       | tag: 0.6  | **`3.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `2-0.6`              | tag: 0.6  | **`2.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-2-0.6`       | tag: 0.6  | **`2.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-|                      |           |              |         |                                              |
-| `1-0.6`              | tag: 0.6  | **`1.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `alpine-1-0.6`       | tag: 0.6  | **`1.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| Docker Tag            | Git Ref       | Eslint       | Flavour | Available Architectures                      |
+|-----------------------|---------------|--------------|---------|----------------------------------------------|
+| `latest-<tag>`        | tag: `<tag>`  | latest       | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-latest-<tag>` | tag: `<tag>`  | latest       | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `8-<tag>`             | tag: `<tag>`  | **`8.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-8-<tag>`      | tag: `<tag>`  | **`8.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `7-<tag>`             | tag: `<tag>`  | **`7.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-7-<tag>`      | tag: `<tag>`  | **`7.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `6-<tag>`             | tag: `<tag>`  | **`6.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-6-<tag>`      | tag: `<tag>`  | **`6.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `5-<tag>`             | tag: `<tag>`  | **`5.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-5-<tag>`      | tag: `<tag>`  | **`5.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `4-<tag>`             | tag: `<tag>`  | **`4.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-4-<tag>`      | tag: `<tag>`  | **`4.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `3-<tag>`             | tag: `<tag>`  | **`3.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-3-<tag>`      | tag: `<tag>`  | **`3.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `2-<tag>`             | tag: `<tag>`  | **`2.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-2-<tag>`      | tag: `<tag>`  | **`2.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+|                       |               |              |         |                                              |
+| `1-<tag>`             | tag: `<tag>`  | **`1.x.x`**  | default | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `alpine-1-<tag>`      | tag: `<tag>`  | **`1.x.x`**  | Alpine  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+
+> Where `<tag>` refers to the chosen git tag from this repository.
 
 
 ## :open_file_folder: Docker mounts
