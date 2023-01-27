@@ -49,7 +49,8 @@ LABEL \
 COPY --from=builder /usr/local/lib/node_modules/ /usr/local/lib/node_modules/
 
 # Move the sarif reporting module to the formatters location
-RUN mv /usr/local/lib/node_modules/@microsoft /usr/local/lib/node_modules/eslint/lib/cli-engine/formatters
+RUN set -eux \
+	&& mv /usr/local/lib/node_modules/@microsoft /usr/local/lib/node_modules/eslint/lib/cli-engine/formatters
 
 RUN set -eux \
 	&& apk add --no-cache nodejs-current \
