@@ -8,9 +8,9 @@ RUN set -eux \
 ARG VERSION=latest
 RUN set -eux \
 	&& if [ ${VERSION} = "latest" ]; then \
-		npm install -g --production --remove-dev eslint; \
+		npm install -g --production --remove-dev eslint @microsoft/eslint-formatter-sarif; \
 	else \
-		npm install -g --production --remove-dev eslint@^${VERSION}.0.0; \
+		npm install -g --production --remove-dev eslint@^${VERSION}.0.0 @microsoft/eslint-formatter-sarif; \
 	fi \
 	\
 	&& /usr/local/lib/node_modules/eslint/bin/eslint.js --version | grep -E '^v?[0-9]+'
@@ -47,6 +47,10 @@ LABEL \
 	maintainer="cytopia <cytopia@everythingcli.org>" \
 	repo="https://github.com/cytopia/docker-eslint"
 COPY --from=builder /usr/local/lib/node_modules/ /usr/local/lib/node_modules/
+
+# Move the sarif reporting module to the formatters location
+RUN mv /usr/local/lib/node_modules/@microsoft /usr/local/lib/node_modules/eslint/lib/cli-engine/formatters
+
 RUN set -eux \
 	&& apk add --no-cache nodejs-current \
 	&& ln -sf /usr/local/lib/node_modules/eslint/bin/eslint.js /usr/bin/eslint
